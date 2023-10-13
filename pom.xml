@@ -1,15 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.74</version>
+    <relativePath />
+  </parent>
 
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>warnings-ng-parent</artifactId>
   <packaging>pom</packaging>
   <version>UNVERSIONED</version>
-  <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-        <version>4.74</version>
-  </parent>
   <name>Aggregator for Warnings Plugin</name>
 
   <modules>
@@ -29,6 +30,13 @@
     <url>https://github.com/jenkinsci/warnings-ng-plugin</url>
     <tag>${scmTag}</tag>
   </scm>
+
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
 
   <pluginRepositories>
     <pluginRepository>
@@ -59,12 +67,6 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin.version}</version>
-          <configuration>
-            <source>${java.version}</source>
-            <target>${java.version}</target>
-            <testSource>${java.version}</testSource>
-            <testTarget>${java.version}</testTarget>
-          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
