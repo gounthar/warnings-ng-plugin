@@ -5,7 +5,11 @@
   <artifactId>warnings-ng-parent</artifactId>
   <packaging>pom</packaging>
   <version>UNVERSIONED</version>
-
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+        <version>4.74</version>
+  </parent>
   <name>Aggregator for Warnings Plugin</name>
 
   <modules>
