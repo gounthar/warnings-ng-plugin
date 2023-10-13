@@ -19,7 +19,6 @@
   </modules>
 
   <properties>
-    <hpi-plugin.version>3.48</hpi-plugin.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
     <jenkins.version>2.401.3</jenkins.version>
@@ -72,7 +71,6 @@
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>${hpi-plugin.version}</version>
       </plugin>
     </plugins>
     <pluginManagement>
